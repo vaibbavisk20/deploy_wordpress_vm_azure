@@ -37,10 +37,10 @@ runs:
         subscription-id: ${{ inputs.subscription-id }}
         enable-AzPSSession: false
 
-    - name: 'Accept Canonical marketplace terms'
-      shell: bash
-      run: |
-        az vm image terms accept --urn Canonical:UbuntuServer:18.04-LTS:latest
+    # - name: 'Accept Canonical marketplace terms'
+    #   shell: bash
+    #   run: |
+    #     az vm image terms accept --urn Canonical:UbuntuServer:18.04-LTS:latest
         
     - name: 'Az deploy - Wordpress on VM'
       uses: azure/arm-deploy@v1
