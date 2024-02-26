@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vmDnsName": {
+        "value": "vmdns"
+      },
+      "adminUsername": {
+        "value": "vaibbavisk"
+      },
+      "mySqlPassword": {
+        "value": "Testing12345"
+      },
+      "vmSize": {
+        "value": "Standard_DS1_v2"
+      },
+      "location": {
+        "value": "[resourceGroup().location]"
+      },
+      "authenticationType": {
+        "value": "password"
+      },
+      "adminPasswordOrKey": {
+        "value": "Testing12345"
+      },
+      "_artifactsLocation": {
+        "value": "[deployment().properties.templateLink.uri]"
+      },
+      "_artifactsLocationSasToken": {
+        "value": null
+      }
+    }
+  }
