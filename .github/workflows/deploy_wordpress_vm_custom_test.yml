@@ -1,12 +1,6 @@
-name: workflow to deploy lamp stack on azure
+name: Workflow to deploy a Wordpress VM on Azure - Custom template
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -21,7 +15,7 @@ jobs:
           uses: actions/checkout@v3
           
         - name: Deploy a Wordpress VM to Azure action
-          uses: ./.github/actions/non_microsoft_tenant
+          uses: ./.github/actions/custom_template
           with:
             client-id: ${{ secrets.AZURE_CLIENT_ID }}
             tenant-id: ${{ secrets.AZURE_TENANT_ID }}
