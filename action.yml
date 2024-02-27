@@ -49,6 +49,7 @@ runs:
         resourceGroupName: ${{ inputs.resource-group-name }}
         template: https://raw.githubusercontent.com/vaibbavisk20/deploy_wordpress_vm_azure/main/vm_template.json
         parameters: https://raw.githubusercontent.com/vaibbavisk20/deploy_wordpress_vm_azure/main/vm_parameters.json
+                    adminUsername=${{ inputs.admin-username }}
                     adminPassword=${{ inputs.admin-password }}
         failOnStdErr: false
 
