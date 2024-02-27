@@ -61,6 +61,8 @@ runs:
         parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/wordpress/wordpress-single-vm-ubuntu/azuredeploy.parameters.json
                     mySqlPassword=${{ inputs.admin-password }}
                     adminPasswordOrKey=${{ inputs.admin-password }}
+                    vmDnsName='dns1'
+                    adminUsername=${{inputs.admin-username}}
         failOnStdErr: false
 
     # - name: Fetch JSON file from remote repository
