@@ -49,8 +49,8 @@ runs:
         resourceGroupName: ${{ inputs.resource-group-name }}
         template: https://raw.githubusercontent.com/vaibbavisk20/deploy_wordpress_vm_azure/main/vm_template.json
         parameters: https://raw.githubusercontent.com/vaibbavisk20/deploy_wordpress_vm_azure/main/vm_parameters.json
-                            mySqlPassword=${{ inputs.admin-password }}
-                            adminPasswordOrKey=${{ inputs.admin-password }}     
+                            # mySqlPassword=${{ inputs.admin-password }}
+                            # adminPasswordOrKey=${{ inputs.admin-password }}     
         failOnStdErr: false
 
     # - name: Fetch JSON file from remote repository
