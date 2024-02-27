@@ -1,4 +1,4 @@
-name: 'Deploy a Wordpress VM to Azure action'
+name: 'Deploy a Wordpress VM to Azure action - Custom Template'
 description: 'This action helps create an Azure VM and deploy Wordpress on it'
 branding:
   icon: 'play-circle'
