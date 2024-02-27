@@ -62,7 +62,7 @@ runs:
         parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/wordpress/wordpress-single-vm-ubuntu/azuredeploy.parameters.json
                     mySqlPassword=${{ inputs.admin-password }}
                     adminPasswordOrKey=${{ inputs.admin-password }}
-                    vmDnsName='wordpressdns1'
+                    vmDnsName='wordpress-dns-t1'
                     adminUsername=${{inputs.admin-username}}
         failOnStdErr: false
 
