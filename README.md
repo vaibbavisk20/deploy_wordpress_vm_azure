@@ -4,7 +4,7 @@
 
 This GitHub Action automates the deployment of a WordPress application on an Azure Virtual Machine (VM). The action provisions the VM and deploys the necessary components using an ARM template and parameter file.
 
-**This documentation is for v1 of vaibbavisk20/deploy_wordpress_vm_azure**
+**This documentation is for v2 of vaibbavisk20/deploy_wordpress_vm_azure**
 
 ## Inputs
 
@@ -56,7 +56,7 @@ jobs:
           uses: actions/checkout@v3
           
         - name: Deploy a WordPress VM to Azure action
-          uses: vaibbavisk20/deploy_wordpress_vm_azure@v1
+          uses: vaibbavisk20/deploy_wordpress_vm_azure/.github/actions/microsoft_tenant@v2
           with:
             client-id: ${{ secrets.AZURE_CLIENT_ID }}
             tenant-id: ${{ secrets.AZURE_TENANT_ID }}
