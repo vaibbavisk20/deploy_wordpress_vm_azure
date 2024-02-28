@@ -60,12 +60,6 @@ runs:
         resourceGroupName: ${{ inputs.resource-group-name }}
         template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.json
         parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.parameters.json
-                    authenticationType=password
-                    mySqlPassword=${{ inputs.admin-password }}
-                    storageAccountNamePrefix=lampappsa
-                    dnsLabelPrefix=dnslabelvm
-                    vmSize=Standard_D2as_v4
-                    adminPasswordOrKey=${{inputs.admin-password}}
         failOnStdErr: false
     # - name: Fetch JSON file from remote repository
     #   shell: bash
