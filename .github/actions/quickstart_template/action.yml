@@ -65,7 +65,7 @@ runs:
                     storageAccountNamePrefix=lampappsa
                     dnsLabelPrefix=dnslabelvm
                     vmSize=Standard_D2as_v4
-                    adminUsername=${{ inputs.admin-username }}
+                    # adminUsername=${{ inputs.admin-username }}
                     adminPasswordOrKey=${{inputs.admin-password}}
         failOnStdErr: false
     # - name: Fetch JSON file from remote repository
