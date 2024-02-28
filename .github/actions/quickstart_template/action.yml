@@ -36,3 +36,18 @@ runs:
         tenant-id: ${{ inputs.tenant-id }}
         subscription-id: ${{ inputs.subscription-id }}
         enable-AzPSSession: false
+
+    - name: 'Az deploy - LAMP on VM Bitnami'
+        uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: ${{ inputs.subscription-id }}
+          resourceGroupName: ${{ inputs.resource-group-name }}
+          template: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.json
+          parameters: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/demos/lamp-app/azuredeploy.parameters.json
+                      authenticationType=password
+                      mySqlPassword=${{ inputs.admin-password }}
+                      storageAccountNamePrefix=lampappsa
+                      dnsLabelPrefix=dnslabelvm
+                      vmSize=Standard_D2as_v4
+                      adminPasswordOrKey=${{inputs.admin-password}}
+          failOnStdErr: false
