@@ -17,10 +17,10 @@ inputs:
     description: 'Resource group to deploy your resources to'
     required: true
   admin-username:
-    description: 'Admin username to login to vm'
+    description: 'Admin username to login to app'
     required: true
   admin-password:
-    description: 'Admin password to login to vm'
+    description: 'Admin password to login to app and mySql'
     required: true
 
 runs:
