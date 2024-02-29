@@ -21,7 +21,7 @@ jobs:
           uses: actions/checkout@v3
           
         - name: Deploy a Wordpress VM to Azure action
-          uses: vaibbavisk20/deploy_lamp_app@v1
+          uses: ./.github/actions/quickstart_template
           with:
             admin-username: ${{secrets.ADMIN_USERNAME}}
             admin-password: ${{secrets.ADMIN_PASSWORD}}
