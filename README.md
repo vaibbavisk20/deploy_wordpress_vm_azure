@@ -2,9 +2,13 @@
 
 ## Description
 
-This GitHub Action automates the deployment of a WordPress application on an Azure Virtual Machine (VM). The action provisions the VM and deploys the necessary components using an ARM template and parameter file.
+This GitHub Action automates the deployment of a Azure Virtual Machine (VM) with a complete LAMP ((Linux, Apache, MySQL, PHP) stack, then installs and initializes WordPress. The action provisions the VM and deploys the necessary components using an ARM template and parameter file.
 
-**This documentation is for v2 of vaibbavisk20/deploy_wordpress_vm_azure**
+Once the deployment is finished, you need to go to http://fqdn.of.your.vm/wordpress/ to finish the configuration, create an account, and get started with WordPress.
+
+[For more information on quickstart template](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/wordpress-single-vm-ubuntu/)
+
+**This documentation is for v3 of vaibbavisk20/deploy_wordpress_vm_azure**
 
 ## Inputs
 
@@ -33,7 +37,7 @@ Set these values as secrets on your repo where the workflow runs
 Create this workflow in your repo on this path: `.github/workflows/workflow_file.yml`
 
 ```yaml
-name: Workflow to deploy WordPress on Azure
+name: Workflow to deploy WordPress VM on Azure
 
 on:
   push:
@@ -56,7 +60,7 @@ jobs:
           uses: actions/checkout@v3
           
         - name: Deploy a WordPress VM to Azure action
-          uses: vaibbavisk20/deploy_wordpress_vm_azure/.github/actions/microsoft_tenant@v2
+          uses: vaibbavisk20/deploy_wordpress_vm_azure/.github/actions/quickstart_template@v2
           with:
             client-id: ${{ secrets.AZURE_CLIENT_ID }}
             tenant-id: ${{ secrets.AZURE_TENANT_ID }}
@@ -67,6 +71,10 @@ jobs:
 ```
 ## Output
 
-The action creates a VM which can be viewed on portal.azure.com and provides information about the deployed VM, including the virtual machine name, location, and VM size.
+The action creates a Wordpress VM which can be viewed on portal.azure.com and provides information about the deployed resources.
+
+
+
+
         
 
