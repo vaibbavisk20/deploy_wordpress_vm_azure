@@ -27,7 +27,7 @@ Set these values as secrets on your repo where the workflow runs
   Usernames must not include reserved words.
   The value is in between 1 and 64 characters long.
   
-- **admin-password** (required): Admin password to log in to the VM.
+- **admin-password** (required): Admin password to login to the App and mySql password.
 
   Password must have 3 of the following: 1 lowercase character, 1 uppercase character, 1 number, and 1 special character.
   The value must be between 12 and 72 characters long.
