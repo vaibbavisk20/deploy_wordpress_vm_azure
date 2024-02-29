@@ -50,7 +50,8 @@ runs:
                     vmSize=Standard_D2as_v4
                     adminUsername=${{ inputs.admin-username }}
                     adminPasswordOrKey=${{inputs.admin-password}}
-        failOnStdErr: false
+        failOnStdErr: true
+      
     - name: Fetch deployment record - Run Azure PowerShell inline script
       uses: azure/powershell@v1
       with:
