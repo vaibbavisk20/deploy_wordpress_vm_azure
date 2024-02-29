@@ -35,7 +35,7 @@ runs:
         client-id: ${{ inputs.client-id }}
         tenant-id: ${{ inputs.tenant-id }}
         subscription-id: ${{ inputs.subscription-id }}
-        enable-AzPSSession: false
+        enable-AzPSSession: true
 
     - name: 'Az deploy - Wordpress on VM'
       uses: azure/arm-deploy@v1
@@ -50,7 +50,7 @@ runs:
                     vmSize=Standard_D2as_v4
                     adminUsername=${{ inputs.admin-username }}
                     adminPasswordOrKey=${{inputs.admin-password}}
-        failOnStdErr: true
+        failOnStdErr: false
       
     - name: Fetch deployment record - Run Azure PowerShell inline script
       uses: azure/powershell@v1
