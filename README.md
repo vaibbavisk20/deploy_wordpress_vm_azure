@@ -6,9 +6,9 @@ This GitHub Action automates the deployment of a Azure Virtual Machine (VM) with
 
 Once the deployment is finished, you need to go to http://fqdn.of.your.vm/wordpress/ to finish the configuration, create an account, and get started with WordPress.
 
-[For more information on quickstart template](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/wordpress-single-vm-ubuntu/)
+[For more information on this quickstart template](https://learn.microsoft.com/en-us/samples/azure/azure-quickstart-templates/wordpress-single-vm-ubuntu/)
 
-**This documentation is for v3 of vaibbavisk20/deploy_wordpress_vm_azure**
+**This documentation is for v4 of vaibbavisk20/deploy_wordpress_vm_azure**
 
 ## Inputs
 
