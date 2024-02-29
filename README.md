@@ -60,6 +60,9 @@ jobs:
           uses: actions/checkout@v3
           
         - name: Deploy a WordPress VM to Azure action
+          # for microsoft tenant
+          uses: vaibbavisk20/deploy_wordpress_vm_azure/.github/actions/custom_template@v2
+          # for non microsoft tenant
           uses: vaibbavisk20/deploy_wordpress_vm_azure/.github/actions/quickstart_template@v2
           with:
             client-id: ${{ secrets.AZURE_CLIENT_ID }}
